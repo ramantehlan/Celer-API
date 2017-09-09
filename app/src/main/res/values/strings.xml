@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Celer</string>
     <string name='sub_heading'>App Developers API</string>
-    <string name="processing">Processing...</string>
+    <string name="api_start">API Started</string>
+    <string name="connected">Successfully Connected to Internet</string>
+    <string name="not_connected">Not Connected to Internet</string>
 </resources>
