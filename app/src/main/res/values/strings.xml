@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Celer</string>
+    <string name='sub_heading'>App Developers API</string>
+    <string name="processing">Processing...</string>
 </resources>
