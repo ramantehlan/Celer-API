@@ -7,6 +7,12 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
+import java.io.FileOutputStream;
+import java.net.URL;
+import java.nio.channels.Channels;
+import java.nio.channels.FileChannel;
+import java.nio.channels.ReadableByteChannel;
+
 public class MainActivity extends AppCompatActivity {
     public TextView output;
 
@@ -16,6 +22,16 @@ public class MainActivity extends AppCompatActivity {
                 = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
+
+    public void getProgram(){
+        try(
+                ReadableByteChannel in= Channels.newChannel(
+                        new URL("https://whispering-stream-80938.herokuapp.com/uploads/sample.java").openStream());
+
+                FileChannel out=new FileOutputStream(getFilesDir() + "/sample.java").getChannel() ) {
+                             out.transferFrom(in, 0, Long.MAX_VALUE);
+                     }
     }
 
     private void printOutput(String newText){

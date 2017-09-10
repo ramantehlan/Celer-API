@@ -61,7 +61,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/api_start"
-            android:textColor="@color/textColorSecondary" />
+            android:textColor="@color/textColorSecondary"
+            android:textSize="12sp" />
     </ScrollView>
 
 
