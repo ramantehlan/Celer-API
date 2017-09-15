@@ -1,2 +1,2 @@
-# Celer-API
-API for distributed processing across a network.
+# Celer-Android-API
+Android API for [**Celer**](https://github.com/ramantehlan/Celer/)
