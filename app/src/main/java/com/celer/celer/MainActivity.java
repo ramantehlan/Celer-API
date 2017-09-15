@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         String line;
 
         while((line = in.readLine()) != null){
-            sb.append(line);101
+            sb.append(line);
         }
 
         in.close();
